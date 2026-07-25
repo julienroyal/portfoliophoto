@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio de Dominic Morissette, photographe, vidéaste et réalisateur au Québec.">
+    <meta name="theme-color" content="#121212">
+    <title>Dominic Morissette | Photographie, vidéo, réalisation</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <link rel="preload" href="./assets/images/hero-dominic-temp.webp" as="image" type="image/webp">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#accueil" aria-label="Dominic Morissette, accueil">
+        <span>Dominic</span>
+        <span>Morissette</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" class="site-nav" aria-label="Navigation principale">
+        <a href="#portraits">Portraits</a>
+        <a href="#documentaires">Documentaires</a>
+        <a href="#mouvements">Mouvements sociaux</a>
+        <a href="#mariages">Mariages</a>
+        <a href="#biographie">Biographie</a>
+        <a class="nav-contact" href="#contact">Pour me joindre</a>
+      </nav>
+    </header>
+
+    <main id="contenu">
+      <section id="accueil" class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" data-hero-slideshow aria-hidden="true">
+          <img class="hero-image is-active" src="./assets/images/hero-dominic-temp.webp" alt="" width="1800" height="1125" fetchpriority="high">
+          <img class="hero-image" src="./assets/images/documentaires-3.jpg" alt="" width="1800" height="1200" decoding="async">
+          <img class="hero-image" src="./assets/images/mouvements-1.jpg" alt="" width="1800" height="1200" decoding="async">
+          <img class="hero-image" src="./assets/images/portraits-4.jpg" alt="" width="1800" height="1200" decoding="async">
+          <img class="hero-image" src="./assets/images/mariages-3.jpg" alt="" width="1800" height="1200" decoding="async">
+        </div>
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+          <p class="hero-kicker">Photographie | Vidéo | Réalisation</p>
+          <h1 id="hero-title">
+            <span>Dominic</span>
+            <span>Morissette</span>
+          </h1>
+          <a class="text-link hero-link" href="#portraits">Découvrir mon travail <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section id="portraits" class="work-section portraits" aria-labelledby="portraits-title">
+        <div class="section-copy reveal">
+          <h2 id="portraits-title">Portraits</h2>
+          <p>Des portraits naturels qui révèlent la personnalité, la présence et l'univers de chaque personne. En studio, en milieu de travail ou dans un environnement significatif, chaque séance vise des images justes, fortes et intemporelles.</p>
+          <button class="gallery-link" type="button" data-open-gallery="portraits">Voir la série <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="portrait-grid gallery-grid reveal" data-gallery-grid="portraits">
+          <button class="photo photo-a" type="button" data-gallery="portraits" data-index="0" aria-label="Agrandir la première image temporaire"><img src="./assets/images/portraits-1.jpg" alt="Image temporaire de la série Portraits" width="1200" height="1500" loading="lazy"></button>
+          <button class="photo photo-b" type="button" data-gallery="portraits" data-index="1" aria-label="Agrandir la deuxième image temporaire"><img src="./assets/images/portraits-2.jpg" alt="Image temporaire de la série Portraits" width="1200" height="1500" loading="lazy"></button>
+          <button class="photo photo-c" type="button" data-gallery="portraits" data-index="2" aria-label="Agrandir la troisième image temporaire"><img src="./assets/images/portraits-3.jpg" alt="Image temporaire de la série Portraits" width="1200" height="1500" loading="lazy"></button>
+          <button class="photo photo-d" type="button" data-gallery="portraits" data-index="3" aria-label="Agrandir la quatrième image temporaire"><img src="./assets/images/portraits-4.jpg" alt="Image temporaire de la série Portraits" width="1200" height="1500" loading="lazy"></button>
+        </div>
+      </section>
+
+      <section id="documentaires" class="work-section documentaries" aria-labelledby="documentaires-title">
+        <div class="doc-heading reveal">
+          <h2 id="documentaires-title">Documentaires</h2>
+          <p>Des projets vidéographiques qui prennent le temps d'observer, d'écouter et de raconter. Des histoires réalisées sur le terrain, au plus près des personnes, des communautés et des réalités explorées.</p>
+        </div>
+        <div class="video-workspace reveal">
+          <div class="video-player-frame">
+            <iframe
+              data-documentary-player
+              src="about:blank"
+              title="Séquence documentaire temporaire"
+              loading="lazy"
+              referrerpolicy="origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-playlist" aria-label="Choisir un film documentaire">
+            <button class="video-choice is-active" type="button" data-video-id="Y-x0efG1seA" data-video-title="Séquence documentaire temporaire" aria-pressed="true">
+              <span class="video-thumbnail">
+                <img src="./assets/videos/documentary-1.jpg" alt="" width="1280" height="720" loading="lazy">
+                <span class="video-play-symbol" aria-hidden="true">▶</span>
+              </span>
+              <span class="video-choice-copy">
+                <strong>Séquence documentaire</strong>
+                <span>Vidéo temporaire</span>
+              </span>
+              <span class="video-choice-action">Lecture</span>
+            </button>
+            <button class="video-choice" type="button" data-video-id="eEzD-Y97ges" data-video-title="Récit de terrain temporaire" aria-pressed="false">
+              <span class="video-thumbnail">
+                <img src="./assets/videos/documentary-2.jpg" alt="" width="1280" height="720" loading="lazy">
+                <span class="video-play-symbol" aria-hidden="true">▶</span>
+              </span>
+              <span class="video-choice-copy">
+                <strong>Récit de terrain</strong>
+                <span>Vidéo temporaire</span>
+              </span>
+              <span class="video-choice-action">Lecture</span>
+            </button>
+            <button class="video-choice" type="button" data-video-id="u31qwQUeGuM" data-video-title="Film d'observation temporaire" aria-pressed="false">
+              <span class="video-thumbnail">
+                <img src="./assets/videos/documentary-3.jpg" alt="" width="1280" height="720" loading="lazy">
+                <span class="video-play-symbol" aria-hidden="true">▶</span>
+              </span>
+              <span class="video-choice-copy">
+                <strong>Film d'observation</strong>
+                <span>Vidéo temporaire</span>
+              </span>
+              <span class="video-choice-action">Lecture</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="mouvements" class="work-section movements" aria-labelledby="mouvements-title">
+        <div class="movement-copy reveal">
+          <h2 id="mouvements-title"><span>Mouvements</span> <span>sociaux</span></h2>
+          <p>Une documentation visuelle des mobilisations, des revendications et des luttes collectives. Ces images donnent un visage aux personnes qui occupent l'espace public pour défendre leurs droits, leurs valeurs et leur vision du monde.</p>
+        </div>
+        <div class="movement-grid gallery-grid reveal" data-gallery-grid="mouvements">
+          <button class="photo photo-wide" type="button" data-gallery="mouvements" data-index="0" aria-label="Agrandir la première image temporaire"><img src="./assets/images/mouvements-2.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
+          <button class="photo photo-tall" type="button" data-gallery="mouvements" data-index="1" aria-label="Agrandir la deuxième image temporaire"><img src="./assets/images/mouvements-3.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
+          <button class="photo" type="button" data-gallery="mouvements" data-index="2" aria-label="Agrandir la troisième image temporaire"><img src="./assets/images/mouvements-4.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
+          <button class="photo" type="button" data-gallery="mouvements" data-index="3" aria-label="Agrandir la quatrième image temporaire"><img src="./assets/images/mouvements-5.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
+        </div>
+        <button class="gallery-link" type="button" data-open-gallery="mouvements">Voir la série <span aria-hidden="true">↗</span></button>
+      </section>
+
+      <section id="mariages" class="work-section weddings" aria-labelledby="mariages-title">
+        <div class="wedding-title reveal">
+          <h2 id="mariages-title">Mariages</h2>
+        </div>
+        <div class="wedding-layout">
+          <div class="wedding-copy reveal">
+            <p>Une approche discrète et sensible pour raconter chaque mariage avec naturel. Des préparatifs aux célébrations, les images captent les émotions, les gestes spontanés et les moments marquants afin de créer un récit fidèle à l'atmosphère unique de la journée.</p>
+            <button class="gallery-link" type="button" data-open-gallery="mariages">Voir la série <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="wedding-grid gallery-grid reveal" data-gallery-grid="mariages">
+            <button class="photo photo-main" type="button" data-gallery="mariages" data-index="0" aria-label="Agrandir la première image temporaire"><img src="./assets/images/mariages-3.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
+            <button class="photo" type="button" data-gallery="mariages" data-index="1" aria-label="Agrandir la deuxième image temporaire"><img src="./assets/images/mariages-1.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
+            <button class="photo" type="button" data-gallery="mariages" data-index="2" aria-label="Agrandir la troisième image temporaire"><img src="./assets/images/mariages-5.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
+            <button class="photo" type="button" data-gallery="mariages" data-index="3" aria-label="Agrandir la quatrième image temporaire"><img src="./assets/images/mariages-4.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="biographie" class="bio-section" aria-labelledby="bio-title">
+        <figure class="bio-portrait reveal">
+          <img src="./assets/images/dominic-morissette-bio.jpg" alt="Portrait de Dominic Morissette" width="2000" height="1333" loading="lazy">
+        </figure>
+        <div class="bio-copy reveal">
+          <h2 id="bio-title">Dominic Morissette</h2>
+          <p>Photographe et vidéaste, Dominic Morissette développe une pratique centrée sur l'humain, le territoire et les histoires qui façonnent notre quotidien. Son approche conjugue sensibilité documentaire, maîtrise technique et attention portée aux détails. À travers chaque mandat, il cherche à créer des images authentiques, évocatrices et profondément ancrées dans le réel.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="reveal">Parlons de votre projet.</h2>
+        <div class="contact-links reveal">
+          <a href="tel:+15149713189">
+            <span>Téléphone</span>
+            <strong>514 971-3189</strong>
+          </a>
+          <a href="mailto:info@dominicmorissette.ca">
+            <span>Courriel</span>
+            <strong>info@dominicmorissette.ca</strong>
+          </a>
+        </div>
+        <footer>
+          <p>Dominic Morissette</p>
+          <p>Photographie | Vidéo | Réalisation</p>
+          <a href="#accueil">Retour en haut <span aria-hidden="true">↑</span></a>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="lightbox" data-lightbox aria-label="Galerie d'images">
+      <div class="lightbox-bar">
+        <p data-lightbox-title>Galerie</p>
+        <button type="button" class="lightbox-close" data-lightbox-close>Fermer</button>
+      </div>
+      <div class="lightbox-stage">
+        <button type="button" class="lightbox-arrow prev" data-lightbox-prev aria-label="Image précédente">←</button>
+        <figure>
+          <img data-lightbox-image src="./assets/images/portraits-1.jpg" alt="Image temporaire de la série Portraits">
+          <figcaption data-lightbox-caption></figcaption>
+        </figure>
+        <button type="button" class="lightbox-arrow next" data-lightbox-next aria-label="Image suivante">→</button>
+      </div>
+    </dialog>
+  </body>
+</html>
