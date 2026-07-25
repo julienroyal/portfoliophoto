@@ -131,9 +131,9 @@ const galleryData = {
   portraits: {
     title: "Portraits",
     images: [
-      ["./assets/images/portraits-1.jpg", "Image temporaire de la série Portraits"],
-      ["./assets/images/portraits-2.jpg", "Image temporaire de la série Portraits"],
-      ["./assets/images/portraits-3.jpg", "Image temporaire de la série Portraits"],
+      ["./assets/images/portraits-1.jpg?v=34974df", "Image temporaire de la série Portraits"],
+      ["./assets/images/portraits-2.jpg?v=34974df", "Image temporaire de la série Portraits"],
+      ["./assets/images/portraits-3.jpg?v=34974df", "Image temporaire de la série Portraits"],
       ["./assets/images/portraits-4.jpg", "Image temporaire de la série Portraits"],
       ["./assets/images/portraits-5.jpg", "Image temporaire de la série Portraits"]
     ]
