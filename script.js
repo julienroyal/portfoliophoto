@@ -143,7 +143,7 @@ const revealSectionColor = (section) => {
   if (prefersReducedMotion.matches) return;
 
   section.classList.add("is-color-revealing");
-  window.setTimeout(() => section.classList.remove("is-color-revealing"), 3200);
+  window.setTimeout(() => section.classList.remove("is-color-revealing"), 2700);
 };
 
 const colorRevealObserver = new IntersectionObserver(

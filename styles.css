@@ -407,7 +407,7 @@ p {
 .js .work-section.is-color-revealed .video-thumbnail::after,
 .js .work-section.is-color-revealed .video-player-frame::after,
 .js .work-section.is-color-revealed .documentary-film-frame::after {
-  animation: color-sweep-reveal 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation: color-sweep-reveal 2.5s linear forwards;
 }
 
 .js .work-section.is-color-revealing .photo::after,
@@ -1330,7 +1330,7 @@ footer a {
   .js .work-section.is-color-revealed .video-thumbnail::after,
   .js .work-section.is-color-revealed .video-player-frame::after,
   .js .work-section.is-color-revealed .documentary-film-frame::after {
-    animation: color-sweep-reveal 3s cubic-bezier(0.65, 0, 0.35, 1) forwards !important;
+    animation: color-sweep-reveal 2.5s linear forwards !important;
   }
 }
 
