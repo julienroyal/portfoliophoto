@@ -21,10 +21,12 @@
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
       <nav id="navigation" class="site-nav" aria-label="Navigation principale">
-        <a href="#portraits">Portraits</a>
-        <a href="#documentaires">Documentaires</a>
         <a href="#mouvements">Mouvements sociaux</a>
-        <a href="#mariages">Mariages</a>
+        <a href="#portraits">Portraits</a>
+        <a href="#evenement">Événement</a>
+        <a href="#reportages">Reportages</a>
+        <a href="#videos">Vidéos</a>
+        <a href="#documentaires">Documentaires</a>
         <a href="#biographie">Biographie</a>
         <a class="nav-contact" href="#contact">Pour me joindre</a>
       </nav>
@@ -46,108 +48,153 @@
             <span>Dominic</span>
             <span>Morissette</span>
           </h1>
-          <a class="text-link hero-link" href="#portraits">Découvrir mon travail <span aria-hidden="true">↓</span></a>
+          <a class="text-link hero-link" href="#mouvements">Découvrir mon travail <span aria-hidden="true">↓</span></a>
         </div>
+      </section>
+
+      <section id="mouvements" class="work-section movements" aria-labelledby="mouvements-title">
+        <div class="category-heading movement-copy reveal">
+          <h2 id="mouvements-title"><span>Mouvements</span> <span>sociaux</span></h2>
+          <p>Une documentation visuelle des mobilisations, des revendications et des luttes collectives. Ces images donnent un visage aux personnes qui occupent l'espace public pour défendre leurs droits, leurs valeurs et leur vision du monde.</p>
+        </div>
+        <div class="movement-grid gallery-grid reveal" data-gallery-grid="mouvements">
+          <button class="photo photo-wide" type="button" data-gallery="mouvements" data-index="0" aria-label="Agrandir la première image temporaire"><img src="./assets/images/mouvements-2.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="800" loading="lazy"></button>
+          <button class="photo photo-tall" type="button" data-gallery="mouvements" data-index="1" aria-label="Agrandir la deuxième image temporaire"><img src="./assets/images/mouvements-3.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="800" loading="lazy"></button>
+          <button class="photo" type="button" data-gallery="mouvements" data-index="2" aria-label="Agrandir la troisième image temporaire"><img src="./assets/images/mouvements-4.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="800" loading="lazy"></button>
+          <button class="photo" type="button" data-gallery="mouvements" data-index="3" aria-label="Agrandir la quatrième image temporaire"><img src="./assets/images/mouvements-5.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="800" loading="lazy"></button>
+        </div>
+        <button class="gallery-link" type="button" data-open-gallery="mouvements">Voir la série <span aria-hidden="true">↗</span></button>
       </section>
 
       <section id="portraits" class="work-section portraits" aria-labelledby="portraits-title">
-        <div class="section-copy reveal">
+        <div class="category-heading portrait-heading reveal">
           <h2 id="portraits-title">Portraits</h2>
-          <p>Des portraits naturels qui révèlent la personnalité, la présence et l'univers de chaque personne. En studio, en milieu de travail ou dans un environnement significatif, chaque séance vise des images justes, fortes et intemporelles.</p>
-          <button class="gallery-link" type="button" data-open-gallery="portraits">Voir la série <span aria-hidden="true">↗</span></button>
+          <p>Des portraits naturels qui révèlent la personnalité, la présence et l'univers de chaque personne. La séance s'adapte au lieu, au métier et au rythme de la personne photographiée.</p>
         </div>
-        <div class="portrait-grid gallery-grid reveal" data-gallery-grid="portraits">
-          <button class="photo photo-a" type="button" data-gallery="portraits" data-index="0" aria-label="Agrandir la première image temporaire"><img src="./assets/images/portraits-1.jpg?v=34974df" alt="Image temporaire de la série Portraits" width="800" height="1200" loading="lazy"></button>
-          <button class="photo photo-b" type="button" data-gallery="portraits" data-index="1" aria-label="Agrandir la deuxième image temporaire"><img src="./assets/images/portraits-2.jpg?v=34974df" alt="Image temporaire de la série Portraits" width="2000" height="1333" loading="lazy"></button>
-          <button class="photo photo-c" type="button" data-gallery="portraits" data-index="2" aria-label="Agrandir la troisième image temporaire"><img src="./assets/images/portraits-3.jpg?v=34974df" alt="Image temporaire de la série Portraits" width="1200" height="800" loading="lazy"></button>
-          <button class="photo photo-d" type="button" data-gallery="portraits" data-index="3" aria-label="Agrandir la quatrième image temporaire"><img src="./assets/images/portraits-4.jpg" alt="Image temporaire de la série Portraits" width="1200" height="1500" loading="lazy"></button>
+        <div class="portrait-strip gallery-grid reveal" data-gallery-grid="portraits">
+          <button class="photo portrait-tall" type="button" data-gallery="portraits" data-index="0" aria-label="Agrandir la première image temporaire de Portraits"><img src="./assets/images/portraits-1.jpg?v=34974df" alt="Image temporaire de la série Portraits" width="800" height="1200" loading="lazy"></button>
+          <button class="photo portrait-wide" type="button" data-gallery="portraits" data-index="1" aria-label="Agrandir la deuxième image temporaire de Portraits"><img src="./assets/images/portraits-2.jpg?v=34974df" alt="Image temporaire de la série Portraits" width="2000" height="1333" loading="lazy"></button>
+          <button class="photo portrait-small" type="button" data-gallery="portraits" data-index="2" aria-label="Agrandir la troisième image temporaire de Portraits"><img src="./assets/images/portraits-3.jpg?v=34974df" alt="Image temporaire de la série Portraits" width="1200" height="800" loading="lazy"></button>
+          <button class="photo portrait-tall" type="button" data-gallery="portraits" data-index="3" aria-label="Agrandir la quatrième image temporaire de Portraits"><img src="./assets/images/portraits-4.jpg" alt="Image temporaire de la série Portraits" width="1200" height="808" loading="lazy"></button>
         </div>
+        <button class="gallery-link" type="button" data-open-gallery="portraits">Voir la série <span aria-hidden="true">↗</span></button>
       </section>
 
-      <section id="documentaires" class="work-section documentaries" aria-labelledby="documentaires-title">
-        <div class="doc-heading reveal">
-          <h2 id="documentaires-title">Documentaires</h2>
-          <p>Des projets vidéographiques qui prennent le temps d'observer, d'écouter et de raconter. Des histoires réalisées sur le terrain, au plus près des personnes, des communautés et des réalités explorées.</p>
+      <section id="evenement" class="work-section events" aria-labelledby="evenement-title">
+        <div class="category-heading event-heading reveal">
+          <h2 id="evenement-title">Événement</h2>
+          <p>Une couverture attentive des rassemblements, célébrations et rencontres professionnelles. Les images retiennent les gestes spontanés, les personnes et l'atmosphère qui donnent sa couleur au moment.</p>
+        </div>
+        <div class="event-grid gallery-grid reveal" data-gallery-grid="evenements">
+          <button class="photo event-main" type="button" data-gallery="evenements" data-index="0" aria-label="Agrandir la première image temporaire d'Événement"><img src="./assets/images/mariages-3.jpg" alt="Image temporaire de la série Événement" width="1800" height="1195" loading="lazy"></button>
+          <button class="photo" type="button" data-gallery="evenements" data-index="1" aria-label="Agrandir la deuxième image temporaire d'Événement"><img src="./assets/images/mariages-1.jpg" alt="Image temporaire de la série Événement" width="1800" height="1195" loading="lazy"></button>
+          <button class="photo" type="button" data-gallery="evenements" data-index="2" aria-label="Agrandir la troisième image temporaire d'Événement"><img src="./assets/images/mariages-5.jpg" alt="Image temporaire de la série Événement" width="1800" height="1195" loading="lazy"></button>
+          <button class="photo event-wide" type="button" data-gallery="evenements" data-index="3" aria-label="Agrandir la quatrième image temporaire d'Événement"><img src="./assets/images/mariages-4.jpg" alt="Image temporaire de la série Événement" width="1800" height="1195" loading="lazy"></button>
+        </div>
+        <button class="gallery-link" type="button" data-open-gallery="evenements">Voir la série <span aria-hidden="true">↗</span></button>
+      </section>
+
+      <section id="reportages" class="work-section reportages" aria-labelledby="reportages-title">
+        <div class="category-heading reportage-heading reveal">
+          <h2 id="reportages-title">Reportages</h2>
+          <p>Des récits photographiques réalisés sur le terrain pour expliquer une réalité, suivre un parcours ou documenter un lieu. Chaque série construit une narration claire, humaine et ancrée dans le réel.</p>
+        </div>
+        <div class="reportage-grid gallery-grid reveal" data-gallery-grid="reportages">
+          <button class="photo reportage-landscape" type="button" data-gallery="reportages" data-index="0" aria-label="Agrandir la première image temporaire de Reportages"><img src="./assets/images/documentaires-1.jpg" alt="Image temporaire de la série Reportages" width="1800" height="1200" loading="lazy"></button>
+          <button class="photo reportage-portrait" type="button" data-gallery="reportages" data-index="1" aria-label="Agrandir la deuxième image temporaire de Reportages"><img src="./assets/images/documentaires-2.jpg" alt="Image temporaire de la série Reportages" width="1800" height="1200" loading="lazy"></button>
+          <button class="photo reportage-square" type="button" data-gallery="reportages" data-index="2" aria-label="Agrandir la troisième image temporaire de Reportages"><img src="./assets/images/documentaires-4.jpg" alt="Image temporaire de la série Reportages" width="1800" height="1200" loading="lazy"></button>
+        </div>
+        <button class="gallery-link" type="button" data-open-gallery="reportages">Voir la série <span aria-hidden="true">↗</span></button>
+      </section>
+
+      <section id="videos" class="work-section videos" aria-labelledby="videos-title">
+        <div class="category-heading video-heading reveal">
+          <h2 id="videos-title">Vidéos</h2>
+          <p>Des films courts, portraits et récits de terrain pensés pour restituer une voix, un rythme et une atmosphère. Sélection temporaire pour présenter le format de la section.</p>
         </div>
         <div class="video-workspace reveal">
           <div class="video-player-frame">
             <iframe
-              data-documentary-player
+              data-video-player
               src="about:blank"
-              title="Séquence documentaire temporaire"
+              title="Séquence vidéo temporaire"
               loading="lazy"
               referrerpolicy="origin"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
           </div>
-          <div class="video-playlist" aria-label="Choisir un film documentaire">
-            <button class="video-choice is-active" type="button" data-video-id="Y-x0efG1seA" data-video-title="Séquence documentaire temporaire" aria-pressed="true">
+          <div class="video-playlist" aria-label="Choisir une vidéo">
+            <button class="video-choice is-active" type="button" data-video-choice data-video-id="Y-x0efG1seA" data-video-title="Séquence vidéo temporaire" aria-pressed="true">
               <span class="video-thumbnail">
                 <img src="./assets/videos/documentary-1.jpg" alt="" width="1280" height="720" loading="lazy">
                 <span class="video-play-symbol" aria-hidden="true">▶</span>
               </span>
-              <span class="video-choice-copy">
-                <strong>Séquence documentaire</strong>
-                <span>Vidéo temporaire</span>
-              </span>
-              <span class="video-choice-action">Lecture</span>
+              <span class="video-choice-copy"><strong>Séquence vidéo</strong><span>Film temporaire</span></span>
             </button>
-            <button class="video-choice" type="button" data-video-id="eEzD-Y97ges" data-video-title="Récit de terrain temporaire" aria-pressed="false">
+            <button class="video-choice" type="button" data-video-choice data-video-id="eEzD-Y97ges" data-video-title="Portrait filmé temporaire" aria-pressed="false">
               <span class="video-thumbnail">
                 <img src="./assets/videos/documentary-2.jpg" alt="" width="1280" height="720" loading="lazy">
                 <span class="video-play-symbol" aria-hidden="true">▶</span>
               </span>
-              <span class="video-choice-copy">
-                <strong>Récit de terrain</strong>
-                <span>Vidéo temporaire</span>
-              </span>
-              <span class="video-choice-action">Lecture</span>
+              <span class="video-choice-copy"><strong>Portrait filmé</strong><span>Film temporaire</span></span>
             </button>
-            <button class="video-choice" type="button" data-video-id="u31qwQUeGuM" data-video-title="Film d'observation temporaire" aria-pressed="false">
+            <button class="video-choice" type="button" data-video-choice data-video-id="u31qwQUeGuM" data-video-title="Récit en mouvement temporaire" aria-pressed="false">
               <span class="video-thumbnail">
                 <img src="./assets/videos/documentary-3.jpg" alt="" width="1280" height="720" loading="lazy">
                 <span class="video-play-symbol" aria-hidden="true">▶</span>
               </span>
-              <span class="video-choice-copy">
-                <strong>Film d'observation</strong>
-                <span>Vidéo temporaire</span>
-              </span>
-              <span class="video-choice-action">Lecture</span>
+              <span class="video-choice-copy"><strong>Récit en mouvement</strong><span>Film temporaire</span></span>
             </button>
           </div>
         </div>
       </section>
 
-      <section id="mouvements" class="work-section movements" aria-labelledby="mouvements-title">
-        <div class="movement-copy reveal">
-          <h2 id="mouvements-title"><span>Mouvements</span> <span>sociaux</span></h2>
-          <p>Une documentation visuelle des mobilisations, des revendications et des luttes collectives. Ces images donnent un visage aux personnes qui occupent l'espace public pour défendre leurs droits, leurs valeurs et leur vision du monde.</p>
+      <section id="documentaires" class="work-section documentaries" aria-labelledby="documentaires-title">
+        <div class="category-heading documentary-heading reveal">
+          <h2 id="documentaires-title">Documentaires</h2>
+          <p>Deux récits au long cours qui prennent le temps d'écouter, d'observer et de laisser les personnes raconter leur réalité. Chaque film se construit au plus près du terrain, des gestes et des voix.</p>
         </div>
-        <div class="movement-grid gallery-grid reveal" data-gallery-grid="mouvements">
-          <button class="photo photo-wide" type="button" data-gallery="mouvements" data-index="0" aria-label="Agrandir la première image temporaire"><img src="./assets/images/mouvements-2.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
-          <button class="photo photo-tall" type="button" data-gallery="mouvements" data-index="1" aria-label="Agrandir la deuxième image temporaire"><img src="./assets/images/mouvements-3.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
-          <button class="photo" type="button" data-gallery="mouvements" data-index="2" aria-label="Agrandir la troisième image temporaire"><img src="./assets/images/mouvements-4.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
-          <button class="photo" type="button" data-gallery="mouvements" data-index="3" aria-label="Agrandir la quatrième image temporaire"><img src="./assets/images/mouvements-5.jpg" alt="Image temporaire de la série Mouvements sociaux" width="1200" height="1500" loading="lazy"></button>
-        </div>
-        <button class="gallery-link" type="button" data-open-gallery="mouvements">Voir la série <span aria-hidden="true">↗</span></button>
-      </section>
+        <div class="documentary-program">
+          <article class="documentary-film documentary-film-primary reveal">
+            <div class="documentary-film-copy">
+              <span>Film 01</span>
+              <h3>Territoires de parole</h3>
+              <p>Un récit documentaire temporaire sur les liens entre mémoire, territoire et transmission.</p>
+            </div>
+            <div class="documentary-film-frame">
+              <iframe
+                data-documentary-embed
+                data-video-id="eEzD-Y97ges"
+                src="about:blank"
+                title="Territoires de parole, documentaire temporaire"
+                loading="lazy"
+                referrerpolicy="origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
 
-      <section id="mariages" class="work-section weddings" aria-labelledby="mariages-title">
-        <div class="wedding-title reveal">
-          <h2 id="mariages-title">Mariages</h2>
-        </div>
-        <div class="wedding-layout">
-          <div class="wedding-copy reveal">
-            <p>Une approche discrète et sensible pour raconter chaque mariage avec naturel. Des préparatifs aux célébrations, les images captent les émotions, les gestes spontanés et les moments marquants afin de créer un récit fidèle à l'atmosphère unique de la journée.</p>
-            <button class="gallery-link" type="button" data-open-gallery="mariages">Voir la série <span aria-hidden="true">↗</span></button>
-          </div>
-          <div class="wedding-grid gallery-grid reveal" data-gallery-grid="mariages">
-            <button class="photo photo-main" type="button" data-gallery="mariages" data-index="0" aria-label="Agrandir la première image temporaire"><img src="./assets/images/mariages-3.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
-            <button class="photo" type="button" data-gallery="mariages" data-index="1" aria-label="Agrandir la deuxième image temporaire"><img src="./assets/images/mariages-1.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
-            <button class="photo" type="button" data-gallery="mariages" data-index="2" aria-label="Agrandir la troisième image temporaire"><img src="./assets/images/mariages-5.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
-            <button class="photo" type="button" data-gallery="mariages" data-index="3" aria-label="Agrandir la quatrième image temporaire"><img src="./assets/images/mariages-4.jpg" alt="Image temporaire de la série Mariages" width="1200" height="1500" loading="lazy"></button>
-          </div>
+          <article class="documentary-film documentary-film-secondary reveal">
+            <div class="documentary-film-copy">
+              <span>Film 02</span>
+              <h3>Présences en mouvement</h3>
+              <p>Une immersion vidéo temporaire où les gestes du quotidien deviennent le fil conducteur du récit.</p>
+            </div>
+            <div class="documentary-film-frame">
+              <iframe
+                data-documentary-embed
+                data-video-id="u31qwQUeGuM"
+                src="about:blank"
+                title="Présences en mouvement, documentaire temporaire"
+                loading="lazy"
+                referrerpolicy="origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
         </div>
       </section>
 
