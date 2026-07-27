@@ -143,7 +143,7 @@ const revealSectionColor = (section) => {
   if (prefersReducedMotion.matches) return;
 
   section.classList.add("is-color-revealing");
-  window.setTimeout(() => section.classList.remove("is-color-revealing"), 15200);
+  window.setTimeout(() => section.classList.remove("is-color-revealing"), 3200);
 };
 
 const colorRevealObserver = new IntersectionObserver(
@@ -159,7 +159,7 @@ const colorRevealObserver = new IntersectionObserver(
   },
   {
     threshold: 0,
-    rootMargin: "-45% 0px -45% 0px"
+    rootMargin: "-30% 0px -30% 0px"
   }
 );
 
@@ -167,7 +167,9 @@ colorRevealSections.forEach((section) => {
   const trigger = document.createElement("span");
   trigger.className = "color-reveal-trigger";
   trigger.setAttribute("aria-hidden", "true");
-  section.append(trigger);
+  const firstMedia = section.querySelector(".photo, .video-player-frame, .documentary-film-frame");
+
+  (firstMedia ?? section).append(trigger);
   colorRevealObserver.observe(trigger);
 });
 

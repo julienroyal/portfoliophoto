@@ -372,13 +372,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: oklch(0.08 0 0 / 0);
-  transition: background-color 400ms var(--ease-out);
-}
-
-.photo:hover::after,
-.photo:focus-visible::after {
-  background: transparent;
+  pointer-events: none;
 }
 
 .photo img {
@@ -387,34 +381,57 @@ p {
   filter: none;
 }
 
-.js .work-section .photo img,
-.js .work-section .video-thumbnail img,
-.js .work-section iframe {
-  filter: grayscale(1) contrast(1.07);
+.js .work-section .photo::after,
+.js .work-section .video-thumbnail::after,
+.js .work-section .video-player-frame::after,
+.js .work-section .documentary-film-frame::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: rgb(0 0 0 / 0.001);
+  -webkit-backdrop-filter: grayscale(1) contrast(1.07);
+  backdrop-filter: grayscale(1) contrast(1.07);
+  -webkit-mask-image: linear-gradient(to right, transparent 0 40%, #000 50% 100%);
+  mask-image: linear-gradient(to right, transparent 0 40%, #000 50% 100%);
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 300% 100%;
+  mask-size: 300% 100%;
+  pointer-events: none;
 }
 
-.js .work-section.is-color-revealed .photo img,
-.js .work-section.is-color-revealed iframe {
-  filter: grayscale(0) contrast(1);
-  transition: filter 14s linear 1s;
+.js .work-section.is-color-revealed .photo::after,
+.js .work-section.is-color-revealed .video-thumbnail::after,
+.js .work-section.is-color-revealed .video-player-frame::after,
+.js .work-section.is-color-revealed .documentary-film-frame::after {
+  animation: color-sweep-reveal 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-.js .work-section.is-color-revealed .video-thumbnail img {
-  filter: grayscale(0) contrast(1);
-  transition:
-    filter 14s linear 1s,
-    transform 500ms var(--ease-out);
+.js .work-section.is-color-revealing .photo::after,
+.js .work-section.is-color-revealing .video-thumbnail::after,
+.js .work-section.is-color-revealing .video-player-frame::after,
+.js .work-section.is-color-revealing .documentary-film-frame::after {
+  will-change: mask-position;
 }
 
-.js .work-section.is-color-revealing .photo img,
-.js .work-section.is-color-revealing .video-thumbnail img,
-.js .work-section.is-color-revealing iframe {
-  will-change: filter;
+@keyframes color-sweep-reveal {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
 }
 
 .color-reveal-trigger {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 0;
   width: 1px;
   height: 1px;
@@ -693,6 +710,7 @@ p {
 
 .video-play-symbol {
   position: absolute;
+  z-index: 2;
   inset: 50% auto auto 50%;
   display: grid;
   width: 2rem;
@@ -791,6 +809,7 @@ p {
 }
 
 .documentary-film-frame {
+  position: relative;
   grid-area: frame;
   overflow: hidden;
   aspect-ratio: 16 / 9;
@@ -1307,10 +1326,11 @@ footer a {
     transform: none;
   }
 
-  .js .work-section.is-color-revealed .photo img,
-  .js .work-section.is-color-revealed .video-thumbnail img,
-  .js .work-section.is-color-revealed iframe {
-    transition-delay: 0s !important;
+  .js .work-section.is-color-revealed .photo::after,
+  .js .work-section.is-color-revealed .video-thumbnail::after,
+  .js .work-section.is-color-revealed .video-player-frame::after,
+  .js .work-section.is-color-revealed .documentary-film-frame::after {
+    animation: color-sweep-reveal 3s cubic-bezier(0.65, 0, 0.35, 1) forwards !important;
   }
 }
 
