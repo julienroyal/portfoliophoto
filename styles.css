@@ -343,7 +343,6 @@ p {
 }
 
 .section-copy p,
-.movement-copy p,
 .category-heading p,
 .bio-copy p {
   max-width: 65ch;
@@ -384,7 +383,8 @@ p {
 .js .work-section .photo::after,
 .js .work-section .video-thumbnail::after,
 .js .work-section .video-player-frame::after,
-.js .work-section .documentary-film-frame::after {
+.js .work-section .documentary-feature-media::after,
+.js .work-section .documentary-link-media::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -406,14 +406,16 @@ p {
 .js .work-section.is-color-revealed .photo::after,
 .js .work-section.is-color-revealed .video-thumbnail::after,
 .js .work-section.is-color-revealed .video-player-frame::after,
-.js .work-section.is-color-revealed .documentary-film-frame::after {
-  animation: color-sweep-reveal 2.5s linear forwards;
+.js .work-section.is-color-revealed .documentary-feature-media::after,
+.js .work-section.is-color-revealed .documentary-link-media::after {
+  animation: color-sweep-reveal 1.5s linear forwards;
 }
 
 .js .work-section.is-color-revealing .photo::after,
 .js .work-section.is-color-revealing .video-thumbnail::after,
 .js .work-section.is-color-revealing .video-player-frame::after,
-.js .work-section.is-color-revealing .documentary-film-frame::after {
+.js .work-section.is-color-revealing .documentary-feature-media::after,
+.js .work-section.is-color-revealing .documentary-link-media::after {
   will-change: mask-position;
 }
 
@@ -449,61 +451,53 @@ p {
   color: var(--muted);
 }
 
-.movements {
+.photography {
+  overflow: hidden;
   background: oklch(0.105 0.006 270);
 }
 
-.movement-copy {
-  max-width: 67rem;
+.photography-heading {
+  max-width: 58rem;
 }
 
-.movement-copy h2 span {
-  display: block;
-}
-
-.movement-copy h2 span:last-child {
-  margin-left: clamp(1.5rem, 13vw, 14rem);
-  color: var(--primary);
-}
-
-.movement-copy p {
-  margin-left: clamp(0rem, 28vw, 30rem);
-}
-
-.movement-grid {
+.photography-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: clamp(0.75rem, 1.4vw, 1.4rem);
-  row-gap: clamp(1.5rem, 4vw, 4rem);
+  row-gap: clamp(2rem, 6vw, 6rem);
   align-items: start;
 }
 
-.movement-grid .photo-wide {
+.photography-grid .photography-lead {
   grid-column: 1 / 9;
   grid-row: 1;
 }
 
-.movement-grid .photo-tall {
+.photography-grid .photography-offset {
   grid-column: 9 / 13;
   grid-row: 1;
-  margin-top: clamp(2rem, 7vw, 7rem);
+  margin-top: clamp(4rem, 10vw, 10rem);
 }
 
-.movement-grid .photo:nth-child(3) {
+.photography-grid .photo:nth-child(3) {
   grid-column: 2 / 7;
   grid-row: 2;
 }
 
-.movement-grid .photo:nth-child(4) {
+.photography-grid .photography-wide {
   grid-column: 7 / 13;
   grid-row: 2;
   margin-top: clamp(1rem, 3vw, 3rem);
 }
 
-.movements > .gallery-link,
+.photography-grid .photography-closing {
+  grid-column: 4 / 11;
+  grid-row: 3;
+}
+
+.photography > .gallery-link,
 .portraits > .gallery-link,
-.events > .gallery-link,
-.reportages > .gallery-link {
+.events > .gallery-link {
   margin-top: 2.5rem;
 }
 
@@ -585,45 +579,6 @@ p {
   margin-top: clamp(1rem, 3vw, 3rem);
 }
 
-.reportages {
-  overflow: hidden;
-  background: oklch(0.125 0.005 270);
-}
-
-.reportage-heading {
-  margin-left: auto;
-  text-align: right;
-}
-
-.reportage-heading p {
-  margin-left: auto;
-}
-
-.reportage-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: clamp(0.75rem, 1.4vw, 1.5rem);
-  row-gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: start;
-}
-
-.reportage-grid .reportage-landscape {
-  grid-column: 1 / 8;
-  grid-row: 1;
-}
-
-.reportage-grid .reportage-portrait {
-  grid-column: 8 / 13;
-  grid-row: 1;
-  margin-top: clamp(4rem, 10vw, 10rem);
-}
-
-.reportage-grid .reportage-square {
-  grid-column: 3 / 10;
-  grid-row: 2;
-  margin-top: clamp(0rem, 2vw, 2rem);
-}
-
 .videos {
   overflow: hidden;
   background: var(--surface-mid);
@@ -631,6 +586,10 @@ p {
 
 .video-heading {
   max-width: 54rem;
+}
+
+.video-heading p {
+  position: relative;
 }
 
 .video-workspace {
@@ -753,74 +712,164 @@ p {
 
 .documentary-program {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: clamp(5rem, 11vw, 11rem) clamp(0.75rem, 1.25vw, 1.25rem);
+  gap: clamp(4.5rem, 9vw, 8.5rem);
   margin-top: clamp(3.5rem, 8vw, 7rem);
 }
 
-.documentary-film {
+.documentary-feature {
   display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(15rem, 3fr);
   align-items: end;
-  gap: clamp(1.5rem, 3vw, 3rem);
+  gap: clamp(1.75rem, 4vw, 4.5rem);
+  color: inherit;
+  text-decoration: none;
 }
 
-.documentary-film-primary {
-  grid-column: 1 / 12;
-  grid-template-areas: "copy frame";
-  grid-template-columns: minmax(10rem, 2.2fr) minmax(0, 8fr);
+.documentary-feature-media,
+.documentary-link-media {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background: var(--bg);
 }
 
-.documentary-film-secondary {
-  grid-column: 4 / 13;
-  grid-template-areas: "frame copy";
-  grid-template-columns: minmax(0, 7fr) minmax(11rem, 2.5fr);
+.documentary-feature-media {
+  aspect-ratio: 16 / 9;
 }
 
-.documentary-film-copy {
+.documentary-feature-media img,
+.documentary-link-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms var(--ease-out);
+}
+
+.documentary-feature-copy {
   display: grid;
-  grid-area: copy;
-  gap: 0.8rem;
-  align-self: end;
+  gap: 1rem;
   padding-top: 1rem;
   border-top: 1px solid var(--line);
 }
 
-.documentary-film-copy span {
+.documentary-platform {
   color: var(--primary);
   font-size: 0.78rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.documentary-film-copy h3 {
-  max-width: 12ch;
-  font-size: clamp(1.6rem, 2.8vw, 2.8rem);
+.documentary-feature h3 {
+  max-width: 10ch;
+  font-size: clamp(2.35rem, 4.8vw, 5rem);
   font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 0.98;
+  letter-spacing: -0.05em;
+  line-height: 0.91;
   text-wrap: balance;
 }
 
-.documentary-film-copy p {
-  max-width: 32ch;
+.documentary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
   color: var(--muted);
-  font-size: clamp(0.85rem, 1vw, 1rem);
-  line-height: 1.55;
-  text-wrap: pretty;
+  font-size: clamp(0.82rem, 0.95vw, 0.95rem);
+  line-height: 1.45;
 }
 
-.documentary-film-frame {
-  position: relative;
-  grid-area: frame;
-  overflow: hidden;
+.documentary-action,
+.documentary-link-action {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  width: max-content;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition:
+    color 250ms ease,
+    transform 350ms var(--ease-out);
+}
+
+.documentary-action {
+  margin-top: clamp(1.2rem, 3vw, 3rem);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.documentary-index {
+  width: min(100%, 78rem);
+  margin-left: auto;
+  border-top: 1px solid var(--line);
+}
+
+.documentary-link {
+  display: grid;
+  grid-template-columns: clamp(9rem, 20vw, 17rem) minmax(0, 1fr) auto;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  align-items: center;
+  padding: clamp(1.25rem, 2vw, 2rem) 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+
+.documentary-link-media {
   aspect-ratio: 16 / 9;
-  background: var(--bg);
 }
 
-.documentary-film-frame iframe {
+.documentary-link-copy {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.documentary-link-copy strong {
+  max-width: 27ch;
+  font-size: clamp(1.25rem, 2.2vw, 2.2rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  text-wrap: balance;
+  transition: color 250ms ease;
+}
+
+.documentary-link-action {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.documentary-feature:hover .documentary-feature-media img,
+.documentary-link:hover .documentary-link-media img {
+  transform: scale(1.025);
+}
+
+.documentary-feature:hover .documentary-action,
+.documentary-link:hover .documentary-link-action {
+  color: var(--primary);
+  transform: translateX(0.35rem);
+}
+
+.documentary-link:hover .documentary-link-copy strong {
+  color: var(--primary);
+}
+
+.documentary-feature:active,
+.documentary-link:active {
+  transform: translateY(1px);
+}
+
+.documentary-feature:focus-visible,
+.documentary-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 0.45rem;
+}
+
+.documentary-feature img,
+.documentary-link img {
+  display: block;
   width: 100%;
   height: 100%;
-  border: 0;
-  filter: none;
 }
 
 .bio-section {
@@ -1166,18 +1215,16 @@ footer a {
   }
 
   .portrait-strip,
-  .movement-grid,
+  .photography-grid,
   .event-grid,
-  .reportage-grid,
   .bio-section,
   .contact-links {
     grid-template-columns: 1fr;
   }
 
   .portrait-strip,
-  .movement-grid,
-  .event-grid,
-  .reportage-grid {
+  .photography-grid,
+  .event-grid {
     height: auto;
     grid-template-rows: none;
     margin-left: 0;
@@ -1185,13 +1232,14 @@ footer a {
 
   .portrait-heading,
   .documentary-heading,
-  .movement-copy p,
-  .movement-copy h2 span:last-child {
+  .photography-heading {
     margin-left: 0;
   }
 
-  .movement-grid .photo-wide,
-  .movement-grid .photo-tall,
+  .photography-grid .photography-lead,
+  .photography-grid .photography-offset,
+  .photography-grid .photography-wide,
+  .photography-grid .photography-closing,
   .event-grid .event-main,
   .event-grid .event-wide {
     grid-column: auto;
@@ -1235,41 +1283,41 @@ footer a {
     grid-template-columns: 6.5rem minmax(0, 1fr);
   }
 
-  .movement-copy h2 span:last-child,
-  .movement-copy p {
-    margin-left: 0;
-  }
-
-  .reportage-heading {
-    text-align: left;
-  }
-
-  .reportage-heading p {
-    margin-left: 0;
-  }
-
   .documentary-program {
-    grid-template-columns: 1fr;
-    gap: 5rem;
+    gap: 4rem;
     margin-top: 3rem;
   }
 
-  .documentary-film-primary,
-  .documentary-film-secondary {
-    grid-column: 1;
-    grid-template-areas:
-      "copy"
-      "frame";
+  .documentary-feature {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .documentary-film-copy {
+  .documentary-feature-copy {
     padding-top: 0.9rem;
   }
 
-  .documentary-film-copy h3 {
-    font-size: clamp(1.7rem, 8vw, 2.4rem);
+  .documentary-feature h3 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .documentary-index {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .documentary-link {
+    grid-template-columns: minmax(7rem, 34vw) minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .documentary-link-action {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .documentary-link-copy strong {
+    font-size: clamp(1.15rem, 5.5vw, 1.7rem);
   }
 
   .bio-section {
@@ -1329,8 +1377,9 @@ footer a {
   .js .work-section.is-color-revealed .photo::after,
   .js .work-section.is-color-revealed .video-thumbnail::after,
   .js .work-section.is-color-revealed .video-player-frame::after,
-  .js .work-section.is-color-revealed .documentary-film-frame::after {
-    animation: color-sweep-reveal 2.5s linear forwards !important;
+  .js .work-section.is-color-revealed .documentary-feature-media::after,
+  .js .work-section.is-color-revealed .documentary-link-media::after {
+    animation: color-sweep-reveal 1.5s linear forwards !important;
   }
 }
 

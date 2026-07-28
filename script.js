@@ -42,7 +42,6 @@ if (heroImages.length > 1) {
 
 const videoPlayer = document.querySelector("[data-video-player]");
 const videoChoices = [...document.querySelectorAll("[data-video-choice]")];
-const documentaryEmbeds = [...document.querySelectorAll("[data-documentary-embed]")];
 
 const getYouTubeEmbedUrl = (videoId, autoplay = false) => {
   const parameters = new URLSearchParams({
@@ -80,10 +79,6 @@ videoChoices.forEach((choice) => {
     videoPlayer.title = choice.dataset.videoTitle;
     videoPlayer.src = getYouTubeEmbedUrl(choice.dataset.videoId, true);
   });
-});
-
-documentaryEmbeds.forEach((embed) => {
-  embed.src = getYouTubeEmbedUrl(embed.dataset.videoId);
 });
 
 const headerObserver = new IntersectionObserver(
@@ -133,7 +128,7 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
 const colorRevealSections = [...document.querySelectorAll(".work-section")].filter((section) =>
-  section.querySelector(".photo, .video-thumbnail img, iframe")
+  section.querySelector(".photo, .video-thumbnail img, iframe, .documentary-feature-media img, .documentary-link-media img")
 );
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -143,7 +138,7 @@ const revealSectionColor = (section) => {
   if (prefersReducedMotion.matches) return;
 
   section.classList.add("is-color-revealing");
-  window.setTimeout(() => section.classList.remove("is-color-revealing"), 2700);
+  window.setTimeout(() => section.classList.remove("is-color-revealing"), 1700);
 };
 
 const colorRevealObserver = new IntersectionObserver(
@@ -167,9 +162,12 @@ colorRevealSections.forEach((section) => {
   const trigger = document.createElement("span");
   trigger.className = "color-reveal-trigger";
   trigger.setAttribute("aria-hidden", "true");
-  const firstMedia = section.querySelector(".photo, .video-player-frame, .documentary-film-frame");
+  const firstMedia = section.querySelector(".photo, .video-player-frame, .documentary-feature-media, .documentary-link-media");
+  const triggerHost = section.id === "videos"
+    ? section.querySelector(".video-heading p")
+    : firstMedia;
 
-  (firstMedia ?? section).append(trigger);
+  (triggerHost ?? section).append(trigger);
   colorRevealObserver.observe(trigger);
 });
 
@@ -184,34 +182,27 @@ const galleryData = {
       ["./assets/images/portraits-5.jpg", "Image temporaire de la série Portraits"]
     ]
   },
-  mouvements: {
-    title: "Mouvements sociaux",
+  photographie: {
+    title: "Photographie",
     images: [
-      ["./assets/images/mouvements-2.jpg", "Image temporaire de la série Mouvements sociaux"],
-      ["./assets/images/mouvements-3.jpg", "Image temporaire de la série Mouvements sociaux"],
-      ["./assets/images/mouvements-4.jpg", "Image temporaire de la série Mouvements sociaux"],
-      ["./assets/images/mouvements-5.jpg", "Image temporaire de la série Mouvements sociaux"],
-      ["./assets/images/mouvements-1.jpg", "Image temporaire de la série Mouvements sociaux"]
+      ["./assets/images/mouvements-2.jpg", "Image temporaire de la série Photographie"],
+      ["./assets/images/documentaires-1.jpg", "Image temporaire de la série Photographie"],
+      ["./assets/images/mouvements-4.jpg", "Image temporaire de la série Photographie"],
+      ["./assets/images/documentaires-2.jpg", "Image temporaire de la série Photographie"],
+      ["./assets/images/documentaires-4.jpg", "Image temporaire de la série Photographie"],
+      ["./assets/images/mouvements-3.jpg", "Image temporaire de la série Photographie"],
+      ["./assets/images/mouvements-5.jpg", "Image temporaire de la série Photographie"],
+      ["./assets/images/documentaires-5.jpg", "Image temporaire de la série Photographie"]
     ]
   },
   evenements: {
-    title: "Événement",
+    title: "Événements",
     images: [
-      ["./assets/images/mariages-3.jpg", "Image temporaire de la série Événement"],
-      ["./assets/images/mariages-1.jpg", "Image temporaire de la série Événement"],
-      ["./assets/images/mariages-5.jpg", "Image temporaire de la série Événement"],
-      ["./assets/images/mariages-4.jpg", "Image temporaire de la série Événement"],
-      ["./assets/images/mariages-2.jpg", "Image temporaire de la série Événement"]
-    ]
-  },
-  reportages: {
-    title: "Reportages",
-    images: [
-      ["./assets/images/documentaires-1.jpg", "Image temporaire de la série Reportages"],
-      ["./assets/images/documentaires-2.jpg", "Image temporaire de la série Reportages"],
-      ["./assets/images/documentaires-4.jpg", "Image temporaire de la série Reportages"],
-      ["./assets/images/documentaires-5.jpg", "Image temporaire de la série Reportages"],
-      ["./assets/images/mouvements-1.jpg", "Image temporaire de la série Reportages"]
+      ["./assets/images/mariages-3.jpg", "Image temporaire de la série Événements"],
+      ["./assets/images/mariages-1.jpg", "Image temporaire de la série Événements"],
+      ["./assets/images/mariages-5.jpg", "Image temporaire de la série Événements"],
+      ["./assets/images/mariages-4.jpg", "Image temporaire de la série Événements"],
+      ["./assets/images/mariages-2.jpg", "Image temporaire de la série Événements"]
     ]
   }
 };
