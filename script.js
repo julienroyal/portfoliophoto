@@ -177,6 +177,8 @@ colorRevealSections.forEach((section) => {
 
   if (section.id === "videos") {
     triggerHost = section.querySelector(".video-heading p");
+  } else if (section.id === "portraits") {
+    triggerHost = section.querySelector(".portrait-heading p");
   }
 
   (triggerHost ?? section).append(trigger);
