@@ -160,7 +160,7 @@ const colorRevealObserver = new IntersectionObserver(
   }
 );
 
-const portraitColorRevealObserver = new IntersectionObserver(
+const introColorRevealObserver = new IntersectionObserver(
   handleColorRevealEntries,
   {
     threshold: 0,
@@ -179,11 +179,14 @@ colorRevealSections.forEach((section) => {
     triggerHost = section.querySelector(".video-heading p");
   } else if (section.id === "portraits") {
     triggerHost = section.querySelector(".portrait-heading p");
+  } else if (section.id === "documentaires") {
+    triggerHost = section.querySelector(".documentary-heading p");
   }
 
   (triggerHost ?? section).append(trigger);
-  const sectionObserver = section.id === "portraits"
-    ? portraitColorRevealObserver
+  const usesIntroColorTrigger = section.id === "portraits" || section.id === "documentaires";
+  const sectionObserver = usesIntroColorTrigger
+    ? introColorRevealObserver
     : colorRevealObserver;
   sectionObserver.observe(trigger);
 });
