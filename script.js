@@ -141,20 +141,30 @@ const revealSectionColor = (section) => {
   window.setTimeout(() => section.classList.remove("is-color-revealing"), 1700);
 };
 
-const colorRevealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
+const handleColorRevealEntries = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
 
-      const section = entry.target.closest(".work-section");
-      revealSectionColor(section);
-      colorRevealObserver.unobserve(entry.target);
-      entry.target.remove();
-    });
-  },
+    const section = entry.target.closest(".work-section");
+    revealSectionColor(section);
+    observer.unobserve(entry.target);
+    entry.target.remove();
+  });
+};
+
+const colorRevealObserver = new IntersectionObserver(
+  handleColorRevealEntries,
   {
     threshold: 0,
     rootMargin: "-30% 0px -30% 0px"
+  }
+);
+
+const portraitColorRevealObserver = new IntersectionObserver(
+  handleColorRevealEntries,
+  {
+    threshold: 0,
+    rootMargin: "0px 0px -90% 0px"
   }
 );
 
@@ -163,12 +173,17 @@ colorRevealSections.forEach((section) => {
   trigger.className = "color-reveal-trigger";
   trigger.setAttribute("aria-hidden", "true");
   const firstMedia = section.querySelector(".photo, .video-player-frame, .documentary-poster-media");
-  const triggerHost = section.id === "videos"
-    ? section.querySelector(".video-heading p")
-    : firstMedia;
+  let triggerHost = firstMedia;
+
+  if (section.id === "videos") {
+    triggerHost = section.querySelector(".video-heading p");
+  }
 
   (triggerHost ?? section).append(trigger);
-  colorRevealObserver.observe(trigger);
+  const sectionObserver = section.id === "portraits"
+    ? portraitColorRevealObserver
+    : colorRevealObserver;
+  sectionObserver.observe(trigger);
 });
 
 const documentaryCinema = document.querySelector("[data-documentary-cinema]");
@@ -255,8 +270,8 @@ const galleryData = {
     title: "Photographie",
     images: [
       ["./assets/images/hero/hero-04.webp", "Manifestation pour le climat menée par de jeunes militantes"],
-      ["./assets/images/photographie/photographie-07.webp", "Enfant marchant près d'une marelle dessinée à la craie"],
       ["./assets/images/photographie/photographie-05.webp", "Intersection urbaine vue depuis une voiture"],
+      ["./assets/images/photographie/photographie-07.webp", "Manifestation syndicale dans les rues du centre-ville de Montréal"],
       ["./assets/images/hero/hero-01.webp", "Homme passant devant une murale colorée"],
       ["./assets/images/photographie/photographie-01.webp", "Pêcheur travaillant avec des casiers au bord de la mer"],
       ["./assets/images/photographie/photographie-02.webp", "Manifestation syndicale sous des pancartes En grève"],
@@ -271,11 +286,12 @@ const galleryData = {
   evenements: {
     title: "Événements",
     images: [
-      ["./assets/images/mariages-3.jpg", "Image temporaire de la série Événements"],
-      ["./assets/images/mariages-1.jpg", "Image temporaire de la série Événements"],
-      ["./assets/images/mariages-5.jpg", "Image temporaire de la série Événements"],
-      ["./assets/images/mariages-4.jpg", "Image temporaire de la série Événements"],
-      ["./assets/images/mariages-2.jpg", "Image temporaire de la série Événements"]
+      ["./assets/images/evenements/dmorissette-17317.webp", "Une porte-parole s'adresse au public sur la scène de Pas de profit sur la maladie"],
+      ["./assets/images/evenements/dmorissette-7882.webp", "Une conférencière prend la parole devant l'affiche du Colloque sur la recherche qui soigne"],
+      ["./assets/images/evenements/dmorissette-22457.webp", "Des participantes prennent part à une table ronde d'Amnistie internationale"],
+      ["./assets/images/evenements/dmorissette-16072.webp", "Une foule rassemblée dans un aréna sous les écrans Vraiment public"],
+      ["./assets/images/evenements/dmorissette-15678.webp", "Un animateur présente Les Nouvelles sur scène"],
+      ["./assets/images/evenements/dmorissette-16691.webp", "Des membres du public lèvent des pancartes Pas de profit sur la maladie et Vraiment public"]
     ]
   }
 };

@@ -461,7 +461,7 @@ p {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: clamp(0.75rem, 1.4vw, 1.4rem);
-  row-gap: clamp(2rem, 6vw, 6rem);
+  row-gap: clamp(3rem, 7vw, 7rem);
   align-items: start;
 }
 
@@ -473,18 +473,18 @@ p {
 .photography-grid .photography-offset {
   grid-column: 9 / 13;
   grid-row: 1;
-  margin-top: clamp(4rem, 10vw, 10rem);
+  margin-top: clamp(4.5rem, 10vw, 9rem);
 }
 
-.photography-grid .photo:nth-child(3) {
-  grid-column: 2 / 7;
+.photography-grid .photography-lower-lead {
+  grid-column: 1 / 8;
   grid-row: 2;
 }
 
 .photography-grid .photography-wide {
-  grid-column: 7 / 13;
+  grid-column: 8 / 13;
   grid-row: 2;
-  margin-top: clamp(1rem, 3vw, 3rem);
+  margin-top: clamp(3.5rem, 7vw, 7rem);
 }
 
 .photography > .gallery-link,
@@ -896,6 +896,37 @@ p {
   border-top: 1px solid currentColor;
   border-right: 1px solid currentColor;
   transform: translateY(0.08rem);
+}
+
+.documentary-poster-label .documentary-poster-action {
+  gap: 0.7rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    transform 250ms var(--ease-out);
+}
+
+.documentary-poster-action::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 0.28rem solid transparent;
+  border-bottom: 0.28rem solid transparent;
+  border-left: 0.45rem solid currentColor;
+}
+
+.documentary-poster:hover .documentary-poster-action,
+.documentary-poster:focus-visible .documentary-poster-action {
+  background: var(--primary);
+  color: var(--bg);
+  transform: translateX(0.2rem);
 }
 
 .documentary-poster:hover .documentary-poster-label {
@@ -1373,6 +1404,7 @@ footer a {
 
   .photography-grid .photography-lead,
   .photography-grid .photography-offset,
+  .photography-grid .photography-lower-lead,
   .photography-grid .photography-wide,
   .event-grid .event-main,
   .event-grid .event-wide {
