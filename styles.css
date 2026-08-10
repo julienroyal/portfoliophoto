@@ -703,6 +703,10 @@ p {
   margin-left: clamp(0rem, 12vw, 12rem);
 }
 
+.documentary-heading p {
+  position: relative;
+}
+
 .documentary-cinema {
   display: grid;
   grid-template-columns: minmax(20rem, 0.92fr) minmax(25rem, 1.08fr);
@@ -970,14 +974,11 @@ p {
   object-fit: cover;
   object-position: 38% center;
   filter: grayscale(1) contrast(1.06);
-  transition:
-    transform 700ms var(--ease-out),
-    filter 700ms var(--ease-out);
+  transition: transform 700ms var(--ease-out);
 }
 
 .bio-portrait:hover img {
   transform: scale(1.025);
-  filter: grayscale(0) contrast(1);
 }
 
 .bio-copy {
@@ -1380,6 +1381,10 @@ footer a {
     font-size: clamp(2.1rem, 10.5vw, 2.8rem);
   }
 
+  .documentaries {
+    padding-block: 4.5rem;
+  }
+
   .portrait-strip,
   .photography-grid,
   .event-grid,
@@ -1485,17 +1490,41 @@ footer a {
   }
 
   .documentary-cinema {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    gap: 4.75rem;
+    display: flex;
+    gap: 1rem;
     height: auto;
-    margin-top: 3rem;
+    width: calc(100% + var(--edge));
+    margin-top: 2rem;
+    padding: 0 var(--edge) 0.75rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: 0 var(--edge);
+    scroll-snap-type: x mandatory;
+    scrollbar-color: var(--primary) transparent;
+    scrollbar-width: thin;
+  }
+
+  .documentary-cinema::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  .documentary-cinema::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .documentary-cinema::-webkit-scrollbar-thumb {
+    background: var(--primary);
   }
 
   .documentary-film {
     display: grid;
-    gap: 1.25rem;
+    flex: 0 0 min(82vw, 21rem);
+    align-content: start;
+    gap: 0.85rem;
+    min-width: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   .documentary-film-copy,
@@ -1505,8 +1534,8 @@ footer a {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     order: 2;
-    gap: 0.55rem;
-    padding: 1.25rem 0 0;
+    gap: 0.4rem;
+    padding: 0.8rem 0 0;
     border-top: 1px solid var(--line);
     border-bottom: 0;
     color: var(--ink);
@@ -1520,8 +1549,9 @@ footer a {
   .documentary-film-copy h3 {
     grid-column: 1;
     grid-row: auto;
-    max-width: 18ch;
-    font-size: clamp(1.75rem, 8vw, 2.4rem);
+    max-width: 22ch;
+    font-size: clamp(1.4rem, 6vw, 1.75rem);
+    line-height: 1.03;
   }
 
   .documentary-film-line,
@@ -1548,16 +1578,35 @@ footer a {
 
   .documentary-poster-media {
     min-height: 0;
-    padding: 0;
+    aspect-ratio: 4 / 5;
+    padding: 0.75rem;
   }
 
   .documentary-poster img {
     width: 100%;
-    max-height: none;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 
   .documentary-poster-label {
-    gap: 0.75rem;
+    display: flex;
+    align-items: stretch;
+    padding: 0.65rem 0 0;
+    border-bottom: 0;
+  }
+
+  .documentary-poster-label > span:first-child {
+    display: none;
+  }
+
+  .documentary-poster-label .documentary-poster-action {
+    justify-content: center;
+    width: 100%;
+    height: 2.75rem;
+    min-height: 2.75rem;
+    padding-block: 0;
+    box-sizing: border-box;
   }
 
   .bio-section {
@@ -1626,11 +1675,5 @@ footer a {
   .site-header.is-scrolled {
     background: var(--bg);
     backdrop-filter: none;
-  }
-}
-
-@media (hover: none) {
-  .bio-portrait img {
-    filter: none;
   }
 }

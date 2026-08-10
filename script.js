@@ -212,6 +212,12 @@ if (documentaryCinema) {
   };
 
   const syncDocumentaryMode = () => {
+    if (documentaryDesktop.matches) {
+      documentaryCinema.removeAttribute("tabindex");
+    } else {
+      documentaryCinema.tabIndex = 0;
+    }
+
     documentaryFilms.forEach((film, index) => {
       const trigger = film.querySelector("[data-documentary-trigger]");
       const poster = film.querySelector(".documentary-poster");
