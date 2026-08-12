@@ -60,6 +60,7 @@ body {
 }
 
 body.menu-open,
+body:has(.series-dialog[open]),
 body:has(.lightbox[open]) {
   overflow: hidden;
 }
@@ -973,7 +974,6 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: 38% center;
-  filter: grayscale(1) contrast(1.06);
   transition: transform 700ms var(--ease-out);
 }
 
@@ -1139,6 +1139,12 @@ footer a {
   columns: 3;
   column-gap: clamp(1rem, 2vw, 2rem);
   padding: clamp(1.25rem, 3vw, 3rem) var(--edge) clamp(4rem, 8vw, 8rem);
+}
+
+@media (min-width: 769px) {
+  .series-grid[data-gallery="evenements"] {
+    columns: 2;
+  }
 }
 
 .series-grid-item {
@@ -1578,7 +1584,7 @@ footer a {
 
   .documentary-poster-media {
     min-height: 0;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 5 / 4;
     padding: 0.75rem;
   }
 
@@ -1615,7 +1621,7 @@ footer a {
 
   .bio-portrait {
     width: 100%;
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 4 / 5;
   }
 
   .bio-portrait img {

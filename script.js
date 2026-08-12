@@ -274,7 +274,9 @@ const galleryData = {
       ["./assets/images/portraits/portrait-03.webp", "Portrait en noir et blanc d'une femme souriante"],
       ["./assets/images/portraits/portrait-04.webp", "Portrait d'un homme assis à une table dans un parc"],
       ["./assets/images/portraits/portrait-05.webp", "Portrait d'un homme barbu sur fond clair"],
-      ["./assets/images/portraits/portrait-06.webp", "Portrait composite en noir et blanc d'un cycliste"]
+      ["./assets/images/portraits/portrait-06.webp", "Portrait composite en noir et blanc d'un cycliste"],
+      ["./assets/images/portraits/dmorissette-16130.webp", "Portrait d'une femme assise à son bureau devant une grande fenêtre"],
+      ["./assets/images/portraits/dmorissette-7038.webp", "Portrait d'une femme aux lunettes rondes"]
     ]
   },
   photographie: {
@@ -297,12 +299,13 @@ const galleryData = {
   evenements: {
     title: "Événements",
     images: [
-      ["./assets/images/evenements/dmorissette-17317.webp", "Une porte-parole s'adresse au public sur la scène de Pas de profit sur la maladie"],
+      ["./assets/images/evenements/dmorissette-1087.webp", "Une oratrice s'adresse aux congressistes depuis la scène"],
       ["./assets/images/evenements/dmorissette-7882.webp", "Une conférencière prend la parole devant l'affiche du Colloque sur la recherche qui soigne"],
       ["./assets/images/evenements/dmorissette-22457.webp", "Des participantes prennent part à une table ronde d'Amnistie internationale"],
       ["./assets/images/evenements/dmorissette-16072.webp", "Une foule rassemblée dans un aréna sous les écrans Vraiment public"],
-      ["./assets/images/evenements/dmorissette-15678.webp", "Un animateur présente Les Nouvelles sur scène"],
-      ["./assets/images/evenements/dmorissette-16691.webp", "Des membres du public lèvent des pancartes Pas de profit sur la maladie et Vraiment public"]
+      ["./assets/images/evenements/dmorissette-16691.webp", "Des membres du public lèvent des pancartes Pas de profit sur la maladie et Vraiment public"],
+      ["./assets/images/evenements/dmorissette-15725.webp", "Une conférencière prend la parole devant un micro lors d'une assemblée"],
+      ["./assets/images/evenements/dmorissette-1659.webp", "Des congressistes applaudissent dans une grande salle"]
     ]
   }
 };
@@ -339,6 +342,7 @@ const renderSeriesGrid = (galleryKey) => {
   const gallery = galleryData[galleryKey];
   seriesTitle.textContent = gallery.title;
   seriesCount.textContent = `${gallery.images.length} images`;
+  seriesGrid.dataset.gallery = galleryKey;
   seriesGrid.replaceChildren();
 
   gallery.images.forEach(([source, alt], index) => {
