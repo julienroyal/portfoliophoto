@@ -269,43 +269,43 @@ const galleryData = {
   portraits: {
     title: "Portraits",
     images: [
-      ["./assets/images/portraits/portrait-01.webp", "Portrait d'une femme sur fond noir"],
-      ["./assets/images/portraits/portrait-02.webp", "Portrait d'un homme dans une pièce éclairée par une fenêtre"],
-      ["./assets/images/portraits/portrait-03.webp", "Portrait en noir et blanc d'une femme souriante"],
-      ["./assets/images/portraits/portrait-04.webp", "Portrait d'un homme assis à une table dans un parc"],
-      ["./assets/images/portraits/portrait-05.webp", "Portrait d'un homme barbu sur fond clair"],
-      ["./assets/images/portraits/portrait-06.webp", "Portrait composite en noir et blanc d'un cycliste"],
-      ["./assets/images/portraits/dmorissette-16130.webp", "Portrait d'une femme assise à son bureau devant une grande fenêtre"],
-      ["./assets/images/portraits/dmorissette-7038.webp", "Portrait d'une femme aux lunettes rondes"]
+      ["./assets/images/portraits/portrait-01.webp", "Marie-Pierre, octobre 2021"],
+      ["./assets/images/portraits/portrait-02.webp", "Papa, Beloeil, mars 2026 — extrait d'un projet documentaire sur le vieillissement et l'Alzheimer"],
+      ["./assets/images/portraits/portrait-03.webp", "Yolande, 2008"],
+      ["./assets/images/portraits/portrait-04.webp", "Pierre Céré, candidat NPD dans la circonscription de Rosemont–Petite-Patrie, Montréal, juillet 2026"],
+      ["./assets/images/portraits/portrait-05.webp", "Conseiller syndical, FNEEQ-CSN, printemps 2026"],
+      ["./assets/images/portraits/portrait-06.webp", "Jérémy, printemps 2014 — extrait de l'exposition « Le lien vert, une série de portraits »"],
+      ["./assets/images/portraits/dmorissette-16130.webp", "Caroline Quesnel, présidente de la FNEEQ-CSN, août 2023"],
+      ["./assets/images/portraits/dmorissette-7038.webp", "Jessica Goldschleger, présidente de la FP-CSN, septembre 2024"]
     ]
   },
   photographie: {
     title: "Photographie",
     images: [
-      ["./assets/images/hero/hero-04.webp", "Manifestation pour le climat menée par de jeunes militantes"],
-      ["./assets/images/photographie/photographie-05.webp", "Intersection urbaine vue depuis une voiture"],
-      ["./assets/images/photographie/photographie-07.webp", "Manifestation syndicale dans les rues du centre-ville de Montréal"],
-      ["./assets/images/hero/hero-01.webp", "Homme passant devant une murale colorée"],
-      ["./assets/images/photographie/photographie-01.webp", "Pêcheur travaillant avec des casiers au bord de la mer"],
-      ["./assets/images/photographie/photographie-02.webp", "Manifestation syndicale sous des pancartes En grève"],
-      ["./assets/images/photographie/photographie-03.webp", "Femme assise devant un tableau dans une salle de classe"],
-      ["./assets/images/photographie/photographie-04.webp", "Manifestation syndicale devant un centre de distribution Amazon"],
-      ["./assets/images/photographie/photographie-06.webp", "Sentier de bois dans un paysage montagneux"],
-      ["./assets/images/hero/hero-02.webp", "Marche syndicale dans les rues de Montréal"],
-      ["./assets/images/hero/hero-03.webp", "Forêt enneigée aperçue depuis un véhicule en mouvement"],
-      ["./assets/images/hero/hero-05.webp", "Pièce vide traversée par des lés de papier peint soulevés"]
+      ["./assets/images/hero/hero-04.webp", "Manifestation pour le climat, Montréal, 27 septembre 2019"],
+      ["./assets/images/photographie/photographie-05.webp", "Erbil, Irak, automne 2010"],
+      ["./assets/images/photographie/photographie-07.webp", "« Dans la rue pour le Québec », manifestation d'une alliance syndicale, Montréal, 25 novembre 2025"],
+      ["./assets/images/hero/hero-01.webp", "Quelques jours après le séisme, Port-au-Prince, Haïti, 19 janvier 2010"],
+      ["./assets/images/photographie/photographie-01.webp", "Petit-de-Grat, Nouvelle-Écosse, printemps 1998 — projet documentaire « Littoral, la pêche côtière au Canada »"],
+      ["./assets/images/photographie/photographie-02.webp", "Grève des syndiqué-es d'entretien de la STM, Montréal, 11 septembre 2025"],
+      ["./assets/images/photographie/photographie-03.webp", "Élection présidentielle post-taliban, province de Bamiyan, Afghanistan, été 2004"],
+      ["./assets/images/photographie/photographie-04.webp", "Manifestation des syndiqué-es d'entrepôt d'Amazon, Laval, 21 septembre 2024"],
+      ["./assets/images/photographie/photographie-06.webp", "Mont du Lac-des-Cygnes, parc national des Grands-Jardins, Québec, août 2025"],
+      ["./assets/images/hero/hero-02.webp", "« Dans la rue pour le Québec », manifestation d'une alliance syndicale, Montréal, 25 novembre 2025"],
+      ["./assets/images/hero/hero-03.webp", "Route 138 sur la Côte-Nord, Québec, automne 2023"],
+      ["./assets/images/hero/hero-05.webp", "Mali, printemps 2010"]
     ]
   },
   evenements: {
     title: "Événements",
     images: [
-      ["./assets/images/evenements/dmorissette-1087.webp", "Une oratrice s'adresse aux congressistes depuis la scène"],
-      ["./assets/images/evenements/dmorissette-7882.webp", "Une conférencière prend la parole devant l'affiche du Colloque sur la recherche qui soigne"],
-      ["./assets/images/evenements/dmorissette-22457.webp", "Des participantes prennent part à une table ronde d'Amnistie internationale"],
-      ["./assets/images/evenements/dmorissette-16072.webp", "Une foule rassemblée dans un aréna sous les écrans Vraiment public"],
-      ["./assets/images/evenements/dmorissette-16691.webp", "Des membres du public lèvent des pancartes Pas de profit sur la maladie et Vraiment public"],
-      ["./assets/images/evenements/dmorissette-15725.webp", "Une conférencière prend la parole devant un micro lors d'une assemblée"],
-      ["./assets/images/evenements/dmorissette-1659.webp", "Des congressistes applaudissent dans une grande salle"]
+      ["./assets/images/evenements/dmorissette-1087.webp", "Mot de la présidente, Caroline Senneville, 67e congrès de la CSN, Montréal, mai 2023"],
+      ["./assets/images/evenements/dmorissette-7882.webp", "Colloque sur la recherche qui soigne, avec la Fondation McPeak-Sirois, Brossard, octobre 2023"],
+      ["./assets/images/evenements/dmorissette-22457.webp", "Assemblée générale annuelle d'Amnistie internationale, Montréal, mai 2024"],
+      ["./assets/images/evenements/dmorissette-16072.webp", "« Pour un réseau vraiment public », Trois-Rivières, 23 novembre 2024"],
+      ["./assets/images/evenements/dmorissette-16691.webp", "« Pour un réseau vraiment public », Trois-Rivières, 23 novembre 2024"],
+      ["./assets/images/evenements/dmorissette-15725.webp", "Caroline Senneville, présidente de la CSN, en conférence de presse, Montréal, août 2023"],
+      ["./assets/images/evenements/dmorissette-1659.webp", "67e congrès de la CSN, Montréal, mai 2023"]
     ]
   }
 };
