@@ -1307,6 +1307,11 @@ footer a {
     --section-space: 6.5rem;
   }
 
+  .hero {
+    /* Stable viewport height prevents mobile browser chrome from shifting the page. */
+    min-height: 100svh;
+  }
+
   .site-header {
     min-height: 4.25rem;
   }
