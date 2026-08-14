@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.dominicmorissette.ca/</loc>
+    <loc>https://dominicmorissette.ca/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/dominic-morissette-og.jpg</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/dominic-morissette-bio.jpg</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/hero/hero-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/hero/hero-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/hero/hero-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/hero/hero-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/hero/hero-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/photographie/photographie-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/photographie/photographie-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/photographie/photographie-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/photographie/photographie-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/photographie/photographie-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/photographie/photographie-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/photographie/photographie-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/portrait-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/portrait-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/portrait-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/portrait-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/portrait-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/portrait-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/dmorissette-16130.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/portraits/dmorissette-7038.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/evenements/dmorissette-1087.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/evenements/dmorissette-7882.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/evenements/dmorissette-16072.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/evenements/dmorissette-22457.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/evenements/dmorissette-15725.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/evenements/dmorissette-1659.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/evenements/dmorissette-16691.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/documentaires/chroniques-afghanes.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/documentaires/derniers-chasseurs.webp</image:loc></image:image>
+    <image:image><image:loc>https://dominicmorissette.ca/assets/images/documentaires/pourquoi-pas-haiti.webp</image:loc></image:image>
   </url>
 </urlset>
