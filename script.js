@@ -284,14 +284,14 @@ const galleryData = {
     images: [
       ["./assets/images/hero/hero-04.webp", "Manifestation pour le climat, Montréal, 27 septembre 2019"],
       ["./assets/images/photographie/photographie-05.webp", "Erbil, Irak, automne 2010"],
-      ["./assets/images/photographie/photographie-07.webp", "« Dans la rue pour le Québec », manifestation d'une alliance syndicale, Montréal, 25 novembre 2025"],
+      ["./assets/images/hero/hero-02.webp", "« Dans la rue pour le Québec », manifestation d'une alliance syndicale, Montréal, 25 novembre 2025"],
       ["./assets/images/hero/hero-01.webp", "Quelques jours après le séisme, Port-au-Prince, Haïti, 19 janvier 2010"],
       ["./assets/images/photographie/photographie-01.webp", "Petit-de-Grat, Nouvelle-Écosse, printemps 1998 — projet documentaire « Littoral, la pêche côtière au Canada »"],
       ["./assets/images/photographie/photographie-02.webp", "Grève des syndiqué-es d'entretien de la STM, Montréal, 11 septembre 2025"],
       ["./assets/images/photographie/photographie-03.webp", "Élection présidentielle post-taliban, province de Bamiyan, Afghanistan, été 2004"],
       ["./assets/images/photographie/photographie-04.webp", "Manifestation des syndiqué-es d'entrepôt d'Amazon, Laval, 21 septembre 2024"],
       ["./assets/images/photographie/photographie-06.webp", "Mont du Lac-des-Cygnes, parc national des Grands-Jardins, Québec, août 2025"],
-      ["./assets/images/hero/hero-02.webp", "« Dans la rue pour le Québec », manifestation d'une alliance syndicale, Montréal, 25 novembre 2025"],
+      ["./assets/images/photographie/photographie-premier-confinement-jules.webp", "Jules, rue Lajeunesse, Montréal, 27 mars 2020 — extrait de l'exposition « Premier confinement »"],
       ["./assets/images/hero/hero-03.webp", "Route 138 sur la Côte-Nord, Québec, automne 2023"],
       ["./assets/images/hero/hero-05.webp", "Mali, printemps 2010"]
     ]
