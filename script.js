@@ -273,7 +273,7 @@ const galleryData = {
       ["./assets/images/portraits/portrait-02.webp", "Papa, Beloeil, mars 2026 — extrait d'un projet documentaire sur le vieillissement et l'Alzheimer"],
       ["./assets/images/portraits/portrait-03.webp", "Yolande, 2008"],
       ["./assets/images/portraits/portrait-04.webp", "Pierre Céré, candidat NPD dans la circonscription de Rosemont–Petite-Patrie, Montréal, juillet 2026"],
-      ["./assets/images/portraits/portrait-05.webp", "Conseiller syndical, FNEEQ-CSN, printemps 2026"],
+      ["./assets/images/portraits/portrait-05.webp", "Yanick Charbonneau, conseiller syndical, FNEEQ-CSN, printemps 2026"],
       ["./assets/images/portraits/portrait-06.webp", "Jérémy, printemps 2014 — extrait de l'exposition « Le lien vert, une série de portraits »"],
       ["./assets/images/portraits/dmorissette-16130.webp", "Caroline Quesnel, présidente de la FNEEQ-CSN, août 2023"],
       ["./assets/images/portraits/dmorissette-7038.webp", "Jessica Goldschleger, présidente de la FP-CSN, septembre 2024"]
