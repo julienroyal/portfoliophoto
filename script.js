@@ -288,7 +288,7 @@ const galleryData = {
       ["./assets/images/hero/hero-01.webp", "Quelques jours après le séisme, Port-au-Prince, Haïti, 19 janvier 2010"],
       ["./assets/images/photographie/photographie-01.webp", "Petit-de-Grat, Nouvelle-Écosse, printemps 1998 — projet documentaire « Littoral, la pêche côtière au Canada »"],
       ["./assets/images/photographie/photographie-02.webp", "Grève des syndiqué-es d'entretien de la STM, Montréal, 11 septembre 2025"],
-      ["./assets/images/photographie/photographie-03.webp", "Élection présidentielle post-taliban, province de Bamiyan, Afghanistan, été 2004"],
+     ["./assets/images/photographie/photographie-03.webp", "Élection présidentielle post-taliban, province de Bamiyan, Afghanistan, été 2004 — extrait du projet documentaire « Chroniques afghanes »"],
       ["./assets/images/photographie/photographie-04.webp", "Manifestation des syndiqué-es d'entrepôt d'Amazon, Laval, 21 septembre 2024"],
       ["./assets/images/photographie/photographie-06.webp", "Mont du Lac-des-Cygnes, parc national des Grands-Jardins, Québec, août 2025"],
       ["./assets/images/photographie/photographie-premier-confinement-jules.webp", "Jules, rue Lajeunesse, Montréal, 27 mars 2020 — extrait de l'exposition « Premier confinement »"],
